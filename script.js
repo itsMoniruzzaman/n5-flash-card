@@ -4,8 +4,8 @@
 const ALLOWED_USERS = [
     { username: "moniruzzaman", password: "20121419" },
     { username: "faysal", password: "123456" },
-    // Want to add another user later? Just paste below like this:
-    // { username: "friend123", password: "mypassword" }
+    { username: "elius", password: "123456" },
+    { username: "farhana", password: "123456" },
 ];
 
 // ==========================================
@@ -26,9 +26,9 @@ try {
     console.error("Supabase skipped.");
 }
 
-// Check if user is already remembered in this browser session
+// Check if user is remembered permanently across browser sessions
 window.addEventListener('DOMContentLoaded', () => {
-    const savedUser = sessionStorage.getItem('jlpt_active_user');
+    const savedUser = localStorage.getItem('jlpt_active_user'); // CHANGED TO LOCALSTORAGE
     if (savedUser) {
         currentUser = savedUser;
         initAppForUser(currentUser);
@@ -40,13 +40,12 @@ function handleLogin() {
     const passInput = document.getElementById('login-pass').value.trim();
     const errorEl = document.getElementById('login-error');
 
-    // Check match against authorized list
     const matchedUser = ALLOWED_USERS.find(u => u.username === userInput && u.password === passInput);
 
     if (matchedUser) {
         errorEl.style.display = 'none';
         currentUser = matchedUser.username;
-        sessionStorage.setItem('jlpt_active_user', currentUser);
+        localStorage.setItem('jlpt_active_user', currentUser); // CHANGED TO LOCALSTORAGE
         initAppForUser(currentUser);
     } else {
         errorEl.style.display = 'block';
@@ -54,7 +53,7 @@ function handleLogin() {
 }
 
 function handleLogout() {
-    sessionStorage.removeItem('jlpt_active_user');
+    localStorage.removeItem('jlpt_active_user'); // CHANGED TO LOCALSTORAGE
     currentUser = null;
     document.getElementById('dashboard').classList.add('hidden');
     document.getElementById('login-screen').classList.remove('hidden');
@@ -67,7 +66,6 @@ function initAppForUser(username) {
     document.getElementById('dashboard').classList.remove('hidden');
     document.getElementById('current-username').innerText = username;
     
-    // Load isolated local database for this specific user
     allCardsDb = loadLocalDatabase(username);
     updateSyncUI();
 }
