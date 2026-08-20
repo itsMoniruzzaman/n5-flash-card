@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 Kanji Retrieval Practice</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        
+        <!-- DASHBOARD VIEW -->
+        <div id="view-dashboard" class="view">
+            <header class="app-header">
+                <a href="../index.html" class="nav-back">← Home</a>
+                <h1>KANJI</h1>
+                <p class="subtitle">N5 Kanji Practice</p>
+            </header>
+
+            <main id="deck-list" class="deck-grid">
+                <!-- Decks injected via JS -->
+            </main>
+
+            <div class="settings-section">
+                <button id="btn-reset" class="btn-text">Reset Kanji Progress</button>
+            </div>
+
+            <footer>
+                <p>&copy; 2026 Built by <a href="https://www.moniruzzamaan.com/" target="_blank" rel="noopener noreferrer" class="credit-link">Moniruzzaman</a>. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <!-- FLASHCARD PRACTICE VIEW -->
+        <div id="view-practice" class="view hidden">
+            <div class="practice-header">
+                <div class="practice-header-top">
+                    <button id="btn-exit-session" class="btn-back">&#8592; Exit</button>
+                    <div id="session-progress" class="progress-text">0 / 0</div>
+                    <div class="header-spacer"></div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div id="flashcard" class="flashcard">
+                    <!-- FRONT OF CARD -->
+                    <div class="card-face card-front" id="card-front">
+                        <div id="kanji-display-front" class="kanji-huge"></div>
+                        <div class="hint">Think, then tap to reveal</div>
+                    </div>
+
+                    <!-- BACK OF CARD -->
+                    <div class="card-face card-back" id="card-back">
+                        <div class="card-back-scroll">
+                            <div id="kanji-display-back" class="kanji-large"></div>
+                            
+                            <div class="info-group">
+                                <span class="label">Meaning</span>
+                                <div id="kanji-meaning" class="value-large"></div>
+                            </div>
+                            
+                            <div class="reading-row">
+                                <div class="info-group">
+                                    <span class="label">Kunyomi</span>
+                                    <div id="kanji-kunyomi" class="value-reading"></div>
+                                </div>
+                                <div class="info-group">
+                                    <span class="label">Onyomi</span>
+                                    <div id="kanji-onyomi" class="value-reading"></div>
+                                </div>
+                            </div>
+
+                            <div class="info-group">
+                                <span class="label">Vocabulary</span>
+                                <ul id="kanji-vocab" class="example-list"></ul>
+                            </div>
+
+                            <div class="info-group">
+                                <span class="label">Sentences</span>
+                                <ul id="kanji-sentences" class="example-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="btn-reveal" class="btn-main pulse-btn">Reveal Answer</button>
+                <div id="rating-controls" class="rating-grid hidden">
+                    <button class="btn-rate bg-again" data-rating="again">
+                        <span class="interval" id="time-again">1m</span>
+                        <span class="label-rate">Again</span>
+                    </button>
+                    <button class="btn-rate bg-hard" data-rating="hard">
+                        <span class="interval" id="time-hard">5m</span>
+                        <span class="label-rate">Hard</span>
+                    </button>
+                    <button class="btn-rate bg-good" data-rating="good">
+                        <span class="interval" id="time-good">10m</span>
+                        <span class="label-rate">Good</span>
+                    </button>
+                    <button class="btn-rate bg-easy" data-rating="easy">
+                        <span class="interval" id="time-easy">2d</span>
+                        <span class="label-rate">Easy</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SESSION SUMMARY VIEW -->
+        <div id="view-summary" class="view hidden">
+            <div class="summary-card">
+                <h2>Practice Complete! 🎉</h2>
+                
+                <div class="summary-stats">
+                    <div class="stat-row"><span>Reviewed:</span> <strong id="sum-reviewed">0</strong></div>
+                    <div class="stat-row rate-again"><span>Again:</span> <strong id="sum-again">0</strong></div>
+                    <div class="stat-row rate-hard"><span>Hard:</span> <strong id="sum-hard">0</strong></div>
+                    <div class="stat-row rate-good"><span>Good:</span> <strong id="sum-good">0</strong></div>
+                    <div class="stat-row rate-easy"><span>Easy:</span> <strong id="sum-easy">0</strong></div>
+                </div>
+
+                <div class="summary-actions">
+                    <button id="btn-review-again" class="btn-main hidden" style="margin-bottom: 10px;">Review Again Cards</button>
+                    <button id="btn-back-deck" class="btn-main bg-white">Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

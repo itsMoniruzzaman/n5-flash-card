@@ -1,235 +1,234 @@
 :root {
+    /* Matches Vocabulary Page Background */
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
     --card-bg: #ffffff;
     --text-dark: #1f2937;
-    --text-gray: #6b7280;
-    --accent: #3b82f6;
-    --color-again: #ff4b4b;
-    --color-hard: #f59e0b;
-    --color-good: #10b981;
-    --color-easy: #3b82f6;
+    --text-muted: #6b7280;
+    
+    /* Vibrant Module Accents */
+    --vocab-color: #5C67DE;
+    --kanji-color: #FF6B6B;
+    --grammar-color: #20B2AA;
+    --other-color: #F6A000;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
-    -webkit-tap-highlight-color: transparent;
 }
 
 body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg-gradient);
     color: var(--text-dark);
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px;
-    overflow-x: hidden;
 }
 
-.app-container {
-    width: 100%;
-    max-width: 420px;
-    height: 94vh;
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+}
+
+/* Base Card Styling - Premium White Cards to match flashcards */
+.module-card {
     display: flex;
     flex-direction: column;
-    position: relative;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* --- AUTH LOGIN SCREEN --- */
-.auth-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    color: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 22px;
+    text-align: center;
+    text-decoration: none;
+    background: var(--card-bg);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.auth-card {
+.module-card h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.module-card p {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* Colored Accents for each Module */
+.card-vocab { border-bottom: 7px solid var(--vocab-color); }
+.card-vocab h3 { color: var(--vocab-color); }
+
+.card-kanji { border-bottom: 7px solid var(--kanji-color); }
+.card-kanji h3 { color: var(--kanji-color); }
+
+.card-grammar { border-bottom: 7px solid var(--grammar-color); }
+.card-grammar h3 { color: var(--grammar-color); }
+
+.card-other { border-bottom: 7px solid var(--other-color); }
+.card-other h3 { color: var(--other-color); }
+
+/* "Pushable" Hover & Active Effects */
+.module-card:hover {
+    top: 3px;
+    border-bottom-width: 4px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.module-card:active {
+    top: 7px;
+    border-bottom-width: 0px;
+    margin-bottom: 7px; /* Prevents layout shift */
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* Backup Section Styling - Frosted Glass to match Vocab screens */
+.backup-section {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 40px 30px;
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.2);
-    width: 100%;
+    padding: 2.5rem;
+    border-radius: 22px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.auth-card h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 5px; }
-
-.auth-card input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 14px;
-    border: none;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    font-weight: 700;
-    outline: none;
-}
-
-/* --- SYNC STATUS BADGE --- */
-.sync-status {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.75rem;
+.backup-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
-    background: rgba(255,255,255,0.2);
-    padding: 6px 12px;
-    border-radius: 20px;
-    color: white;
-    backdrop-filter: blur(5px);
-    z-index: 10;
+    color: #ffffff;
 }
 
-.sync-dot { width: 8px; height: 8px; border-radius: 50%; }
-.sync-status.local .sync-dot { background-color: #f59e0b; box-shadow: 0 0 5px #f59e0b; }
-.sync-status.cloud .sync-dot { background-color: #10b981; box-shadow: 0 0 5px #10b981; }
-
-/* --- SCREEN 1: DASHBOARD --- */
-#dashboard {
+.backup-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 35px;
-    flex-grow: 1;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
 }
 
-.dashboard-header { color: white; margin-bottom: 10px; }
-.dashboard-header h1 { font-weight: 800; font-size: 1.3rem; letter-spacing: 1px; }
-
-.btn-master {
-    background: linear-gradient(135deg, #f59e0b, #ea580c);
-    color: white;
-    border: none;
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 1.2rem;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    text-transform: uppercase;
-}
-.btn-master:active { transform: scale(0.96); }
-
-.lesson-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    overflow-y: auto;
-    padding-bottom: 20px;
-}
-
-.btn-lesson {
-    background: white;
-    color: var(--accent);
-    border: none;
-    padding: 15px;
+/* Chunky App-Style Buttons */
+.btn {
+    padding: 0.9rem 1.75rem;
     border-radius: 16px;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 800;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.btn-lesson:active { transform: scale(0.95); }
-
-/* --- SCREEN 2: STUDY SESSION --- */
-#study-screen {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    flex-grow: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.15s ease;
+    position: relative;
+    top: 0;
 }
 
-.study-header { color: white; margin-bottom: 20px; padding-top: 35px; }
-.study-header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
-.btn-back {
-    background: rgba(255, 255, 255, 0.2); color: white; border: none;
-    padding: 8px 14px; border-radius: 12px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+.btn-export {
+    background-color: #ffffff;
+    color: var(--vocab-color);
+    border: none;
+    border-bottom: 5px solid #d1d5db;
 }
-.study-header h2 { font-size: 1.2rem; font-weight: 800; margin: 0; text-align: center; }
-.header-spacer { width: 70px; }
 
-.progress-wrapper { background: rgba(255, 255, 255, 0.2); height: 10px; border-radius: 20px; overflow: hidden; width: 100%; }
-.progress-fill { height: 100%; background: #10b981; width: 0%; border-radius: 20px; transition: width 0.3s; }
-
-.card-container { perspective: 1500px; width: 100%; height: 400px; cursor: pointer; margin: auto 0; }
-.flashcard {
-    width: 100%; height: 100%; position: relative;
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform-style: preserve-3d; border-radius: 30px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+.btn-import {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
 }
-.flashcard.flipped { transform: rotateY(180deg); }
 
-.card-face {
-    position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 30px; border-radius: 30px; background: var(--card-bg);
+.btn:hover {
+    top: 2px;
+    border-bottom-width: 3px;
 }
-.card-back { transform: rotateY(180deg); background: #f8fafc; border: 4px solid var(--accent); }
 
-.jp-word { font-family: 'Noto Sans JP', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--text-dark); }
-.jp-word-small { font-family: 'Noto Sans JP', sans-serif; font-size: 1.5rem; color: var(--text-gray); margin-bottom: 20px; }
-.bn-meaning { font-family: 'Noto Sans Bengali', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent); text-align: center; }
-.hint { position: absolute; bottom: 20px; font-size: 0.9rem; color: #cbd5e1; font-weight: 700; }
-
-.controls { height: 100px; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 20px; }
-
-.btn-main {
-    width: 100%; padding: 20px; font-size: 1.2rem; font-weight: 800; color: var(--accent);
-    background: white; border: none; border-radius: 20px; cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); text-transform: uppercase;
+.btn:active {
+    top: 5px;
+    border-bottom-width: 0px;
+    margin-bottom: 5px;
 }
-.btn-main:active { transform: translateY(4px); }
 
-.rating-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; width: 100%; }
-.btn-rate {
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 15px 5px; border: none; border-radius: 16px; cursor: pointer; color: white;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-.btn-rate .interval { font-size: 0.8rem; font-weight: 800; opacity: 0.9; margin-bottom: 4px; }
-.btn-rate .label { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; }
+.btn-export:hover { filter: brightness(0.95); }
+.btn-import:hover { background-color: rgba(255, 255, 255, 0.25); }
 
-.bg-again { background: var(--color-again); }
-.bg-hard { background: var(--color-hard); }
-.bg-good { background: var(--color-good); }
-.bg-easy { background: var(--color-easy); }
+/* Standard Website Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
 
-/* --- SCREEN 3: SUMMARY --- */
-#summary-screen {
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    height: 100%; flex-grow: 1; color: white; text-align: center;
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 600;
 }
-.summary-card {
-    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
-    padding: 40px 30px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); width: 100%;
-}
-.summary-card h2 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
-.accuracy-circle {
-    width: 150px; height: 150px; border-radius: 50%;
-    background: conic-gradient(#10b981 0%, rgba(255,255,255,0.2) 0%);
-    display: flex; align-items: center; justify-content: center; margin: 30px auto; position: relative;
-}
-.accuracy-circle::before { content: ""; position: absolute; width: 120px; height: 120px; background: var(--bg-gradient); border-radius: 50%; }
-.accuracy-text { position: relative; font-size: 2.5rem; font-weight: 900; }
-.stats-text { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
 
-/* --- FOOTER --- */
-.app-footer {
-    margin-top: auto; text-align: center; padding: 15px 0 5px 0;
-    font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-weight: 600;
+/* Slightly lighter green so it pops against the purple background */
+.credit-link {
+    color: #69F0AE; 
+    text-decoration: none;
+    position: relative;
+    font-weight: 800; 
+    transition: color 0.2s ease;
+}
+
+.credit-link:hover {
+    color: #B9F6CA;
+}
+
+/* Subtle underline animation on hover */
+.credit-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #B9F6CA;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.credit-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
