@@ -24,15 +24,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             position: relative;
         }
 
         .nav-container {
             position: absolute;
-            top: 2rem;
-            left: 2rem;
+            top: 1.5rem;
+            left: 1.5rem;
         }
 
         .back-btn {
@@ -42,9 +41,9 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             background: rgba(255, 255, 255, 0.15);
-            padding: 0.5rem 1.25rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -52,25 +51,23 @@
             transition: all 0.2s ease;
         }
 
-        .back-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateX(-3px);
-        }
-
         .glass-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 4rem 3rem;
+            padding: 3rem 1.5rem;
             border-radius: 24px;
-            max-width: 600px;
+            width: 100%;
+            max-width: 500px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
             animation: float 6s ease-in-out infinite;
         }
 
         .glow-text {
-            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-size: clamp(2.2rem, 8vw, 4rem);
+            white-space: nowrap;
             font-weight: 900;
             letter-spacing: -1px;
             background: linear-gradient(to right, #ffffff, #e2e8f0);
@@ -81,15 +78,17 @@
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.6;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            text-wrap: balance;
+            padding: 0 0.5rem;
         }
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
             100% { transform: translateY(0px); }
         }
     </style>
