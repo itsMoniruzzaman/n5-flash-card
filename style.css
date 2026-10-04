@@ -1,0 +1,288 @@
+:root {
+    /* Background */
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    --card-bg: #ffffff;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    
+    /* Level Accents */
+    --n5-color: #5C67DE; 
+    --n4-color: #20B2AA; 
+    --n3-color: #F6A000; 
+    --n2-color: #FF6B6B; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
+    flex: 1;
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sleek Button-Style App Title (Apple Typography) */
+.app-title-btn {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: clamp(1.8rem, 6vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 2.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.subtitle-text {
+    font-size: clamp(1rem, 4vw, 1.15rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Premium Yellow Highlighter Effect - Refined */
+.yellow-highlight {
+    background-image: linear-gradient(120deg, rgba(251, 191, 36, 0.3) 0%, rgba(251, 191, 36, 0.95) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    background-position: 0 90%;
+    color: #ffffff;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 800;
+}
+
+/* Modules Grid */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+}
+
+/* Base Card Styling */
+.module-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 22px;
+    text-align: center;
+    text-decoration: none;
+    background: var(--card-bg);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.module-card h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.module-card p {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* Specific Card Colors */
+.card-n5 { border-bottom: 7px solid var(--n5-color); }
+.card-n5 h3 { color: var(--n5-color); }
+
+.card-n4 { border-bottom: 7px solid var(--n4-color); }
+.card-n4 h3 { color: var(--n4-color); }
+
+.card-n3 { border-bottom: 7px solid var(--n3-color); }
+.card-n3 h3 { color: var(--n3-color); }
+
+.card-n2 { border-bottom: 7px solid var(--n2-color); }
+.card-n2 h3 { color: var(--n2-color); }
+
+/* Hover Effects */
+.module-card:hover {
+    top: 3px;
+    border-bottom-width: 4px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.module-card:active {
+    top: 7px;
+    border-bottom-width: 0px;
+    margin-bottom: 7px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* Backup Section */
+.backup-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 22px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.backup-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.backup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.9rem 1.75rem;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.15s ease;
+    position: relative;
+    top: 0;
+}
+
+.btn-export {
+    background-color: #ffffff;
+    color: var(--n5-color);
+    border: none;
+    border-bottom: 5px solid #d1d5db;
+}
+
+.btn-import {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn:hover {
+    top: 2px;
+    border-bottom-width: 3px;
+}
+
+.btn:active {
+    top: 5px;
+    border-bottom-width: 0px;
+    margin-bottom: 5px;
+}
+
+.btn-export:hover { filter: brightness(0.95); }
+.btn-import:hover { background-color: rgba(255, 255, 255, 0.25); }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Footer Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    color: #69F0AE; 
+    transform: translateY(-2px);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.credit-link {
+    color: #69F0AE; 
+    text-decoration: none;
+    position: relative;
+    font-weight: 800; 
+    transition: color 0.2s ease;
+}
+
+.credit-link:hover {
+    color: #B9F6CA;
+}
+
+.credit-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #B9F6CA;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.credit-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
