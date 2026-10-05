@@ -1,5 +1,5 @@
 // ==========================================
-// 1. DATASET (All 170 N5 Kanji in 10 Thematic Decks)
+// 1. DATASET (All 170 Original N5 Kanji with 10 Thematic Decks & Others)
 // ==========================================
 const KANJI_DATA = [
     // --- DECK 1: Numbers & Counters (1-13) ---
@@ -82,7 +82,7 @@ const KANJI_DATA = [
     { id: "N5K136", kanji: "勉", meaning: "exertion / অধ্যবসায়", kunyomi: [], onyomi: ["ベン"], vocabulary: [{ word: "勉強", reading: "べんきょう", meaning: "study / পড়াশোনা" }], sentences: [{ japanese: "日本語を勉強します。", reading: "にほんごを べんきょうします。", meaning: "I study Japanese. / আমি জাপানি পড়াশোনা করি।" }], deck: 5 },
     { id: "N5K137", kanji: "強", meaning: "strong / শক্তিশালী", kunyomi: ["つよ.い"], onyomi: ["キョウ"], vocabulary: [{ word: "強い", reading: "つよい", meaning: "strong / শক্তিশালী" }], sentences: [{ japanese: "風が強いです。", reading: "かぜが つよいです。", meaning: "Wind is strong. / বাতাস শক্তিশালী।" }], deck: 5 },
     { id: "N5K138", kanji: "答", meaning: "answer / উত্তর দেওয়া", kunyomi: ["こた.える"], onyomi: ["トウ"], vocabulary: [{ word: "答える", reading: "こたえる", meaning: "to answer / উত্তর দেওয়া" }], sentences: [{ japanese: "質問に答えます。", reading: "しつもんに こたえます。", meaning: "I answer the question. / আমি প্রশ্নের উত্তর দিই।" }], deck: 5 },
-    { id: "N5K139", kanji: "住", meaning: "live, dwell / বাস করা", kunyomi: ["す.む"], onyomi: ["ジュウ"], vocabulary: [{ word: "住む", reading: "すむ", meaning: "to live / বাস করা" }], sentences: [{ japanese: "東京に住んでいます。", reading: "とうきょうに すんでいます。", meaning: "I live in Tokyo. / আমি টোকিওতে বাস করি।" }], deck: 5 },
+    { id: "N5K139", kanji: "住", meaning: "live, dwell / বাস করা", kunyomi: ["す.む"], onyomi: ["ジュウ"], vocabulary: [{ word: "住む", reading: "すむ", meaning: "to live / বাস করা" }], sentences: [{ japanese: "東京に住んでいます。", reading: "とうきょうに すんでいます。", meaning: "I live in Tokyo. / আমি কিয়োটোতে বাস করি।" }], deck: 5 },
     { id: "N5K140", kanji: "知", meaning: "know / জানা", kunyomi: ["し.る"], onyomi: ["チ"], vocabulary: [{ word: "知る", reading: "しる", meaning: "to know / জানা" }], sentences: [{ japanese: "あの人を知っています。", reading: "あのひとを しっています。", meaning: "I know that person. / আমি ওই মানুষটিকে চিনি।" }], deck: 5 },
     { id: "N5K141", kanji: "作", meaning: "make / তৈরি করা", kunyomi: ["つく.る"], onyomi: ["サク"], vocabulary: [{ word: "作る", reading: "つくる", meaning: "to make / তৈরি করা" }], sentences: [{ japanese: "ケーキを作ります。", reading: "けーきを つくります。", meaning: "I make a cake. / আমি কেক তৈরি করি।" }], deck: 5 },
     { id: "N5K142", kanji: "海", meaning: "sea / সাগর", kunyomi: ["うみ"], onyomi: ["カイ"], vocabulary: [{ word: "海", reading: "うみ", meaning: "sea / সাগর" }], sentences: [{ japanese: "海へ行きたいです。", reading: "うみへ いきたいです。", meaning: "I want to go to the sea. / আমি সাগরে যেতে চাই।" }], deck: 5 },
@@ -156,7 +156,7 @@ const KANJI_DATA = [
     { id: "N5K106", kanji: "銀", meaning: "silver / রূপা", kunyomi: [], onyomi: ["ギン"], vocabulary: [{ word: "銀行", reading: "ぎんこう", meaning: "bank / ব্যাংক" }], sentences: [{ japanese: "銀行はお休みです。", reading: "ぎんこうは おやすみです。", meaning: "The bank is closed. / ব্যাংক বন্ধ।" }], deck: 9 },
     { id: "N5K107", kanji: "病", meaning: "illness / রোগ", kunyomi: ["やまい"], onyomi: ["ビョウ"], vocabulary: [{ word: "病院", reading: "びょういん", meaning: "hospital / হাসপাতাল" }], sentences: [{ japanese: "病気になりました。", reading: "びょうきに なりました。", meaning: "I became sick. / আমি অসুস্থ হয়ে পড়েছি।" }], deck: 9 },
     { id: "N5K108", kanji: "院", meaning: "institution / প্রতিষ্ঠান", kunyomi: [], onyomi: ["イン"], vocabulary: [{ word: "大学院", reading: "だいがくいん", meaning: "graduate school / স্নাতক স্কুল" }], sentences: [{ japanese: "病院へ行きます。", reading: "びょういんへ いきます。", meaning: "I go to the hospital. / আমি হাসপাতালে যাই।" }], deck: 9 },
-    { id: "N5K169", kanji: "紙", meaning: "paper / কাগজ", kunyomi: ["かみ"], onyomi: ["シ"], vocabulary: [{ word: "手紙", reading: "てがみ", meaning: "letter / চিঠি" }], sentences: [{ japanese: "紙に書きます。", reading: "かみに かきます。", meaning: "I write on paper. / আমি কাগজে লিখি।" }], deck: 9 },
+    { id: "N5K169", kanji: "紙", meaning: "paper / কাগজ", kunyomi: ["かみ"], onyomi: ["シ"], vocabulary: [{ word: "手紙", reading: "te-gami", meaning: "letter / চিঠি" }], sentences: [{ japanese: "紙に書きます。", reading: "かみに かきます。", meaning: "I write on paper. / আমি কাগজে লিখি।" }], deck: 9 },
     { id: "N5K170", kanji: "門", meaning: "gate / গেট", kunyomi: ["かど"], onyomi: ["モン"], vocabulary: [{ word: "専門", reading: "せんもん", meaning: "specialty / বিশেষত্ব" }], sentences: [{ japanese: "学校の門で待ちます。", reading: "がっこうの もんで まちます。", meaning: "I wait at the school gate. / আমি স্কুলের গেটে অপেক্ষা করি।" }], deck: 9 },
 
     // --- DECK 10: Animals, Food & Surroundings ---
@@ -235,7 +235,7 @@ function createDefaultRecord() {
 }
 
 function resetProgress() {
-    if (confirm("Reset all Kanji progress and scheduling data?\n\nThis cannot be undone.")) {
+    if (confirm("Reset all N5 Kanji progress and scheduling data?\n\nThis cannot be undone.")) {
         localStorage.removeItem(STORAGE_KEY);
         loadProgress();
         renderDashboard();
@@ -357,11 +357,15 @@ function switchView(viewId) {
 
 function renderDashboard() {
     const now = Date.now();
-    // Using your exact 10 thematic decks + master deck mapping
     const deckMap = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [], master: [] };
     
     KANJI_DATA.forEach(card => {
-        if (deckMap[card.deck]) deckMap[card.deck].push(card);
+        if (deckMap[card.deck]) {
+            deckMap[card.deck].push(card);
+        } else {
+            // Safety fallback if any card falls out of range
+            deckMap[10].push(card);
+        }
         deckMap.master.push(card);
     });
 
@@ -381,7 +385,7 @@ function renderDashboard() {
 
     let dashboardHTML = ''; 
 
-    // Render Master Deck first, followed by Decks 1 to 10
+    // Render Master Deck first, then Decks 1 through 10
     ['master', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].forEach(deckId => {
         const cards = deckMap[deckId];
         if (!cards || cards.length === 0) return;
