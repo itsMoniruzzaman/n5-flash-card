@@ -17,7 +17,7 @@ const KANJI_DATA = [
     { id: "N5K012", kanji: "千", meaning: "thousand / হাজার", kunyomi: ["ち"], onyomi: ["セン"], vocabulary: [{ word: "三千", reading: "さんぜん", meaning: "3,000 / তিন হাজার" }], sentences: [{ japanese: "千円札があります。", reading: "せんえんさつが あります。", meaning: "I have a 1000 yen bill. / আমার কাছে ১০০০ ইয়েনের নোট আছে।" }], deck: 1 },
     { id: "N5K013", kanji: "万", meaning: "ten thousand / দশ হাজার", kunyomi: [], onyomi: ["マン"], vocabulary: [{ word: "一万", reading: "いちまん", meaning: "10,000 / দশ হাজার" }], sentences: [{ japanese: "一万円払います。", reading: "いちまんえん はらいます。", meaning: "I will pay 10k yen. / আমি দশ হাজার ইয়েন দেব।" }], deck: 1 },
 
-    // --- DECK 2: Time, Days & Calendar (14-21, 56-63, 121-124, 167-168) ---
+    // --- DECK 2: Time, Days & Calendar ---
     { id: "N5K014", kanji: "日", meaning: "day / sun / দিন", kunyomi: ["ひ", "か"], onyomi: ["ニチ", "ジツ"], vocabulary: [{ word: "今日", reading: "きょう", meaning: "today / আজ" }], sentences: [{ japanese: "今日はいい天気です。", reading: "きょうは いいてんき です。", meaning: "Weather is good today. / আজকের আবহাওয়া ভালো।" }], deck: 2 },
     { id: "N5K015", kanji: "月", meaning: "month / moon / মাস", kunyomi: ["つき"], onyomi: ["ゲツ", "ガツ"], vocabulary: [{ word: "今月", reading: "こんげつ", meaning: "this month / এই মাস" }], sentences: [{ japanese: "月がきれいです。", reading: "つきが きれいです。", meaning: "The moon is beautiful. / চাঁদ সুন্দর।" }], deck: 2 },
     { id: "N5K016", kanji: "火", meaning: "fire / আগুন", kunyomi: ["ひ"], onyomi: ["カ"], vocabulary: [{ word: "火曜日", reading: "かようび", meaning: "Tuesday / মঙ্গলবার" }], sentences: [{ japanese: "火に気をつけて。", reading: "ひに きをつけて。", meaning: "Careful with fire. / আগুন থেকে সাবধানে থাকবেন।" }], deck: 2 },
@@ -41,7 +41,7 @@ const KANJI_DATA = [
     { id: "N5K167", kanji: "毎", meaning: "every / প্রতি", kunyomi: [], onyomi: ["マイ"], vocabulary: [{ word: "毎日", reading: "まいにち", meaning: "every day / প্রতিদিন" }], sentences: [{ japanese: "毎日勉強します。", reading: "まいにち べんきょうします。", meaning: "I study every day. / আমি প্রতিদিন পড়ি।" }], deck: 2 },
     { id: "N5K168", kanji: "週", meaning: "week / সপ্তাহ", kunyomi: [], onyomi: ["シュウ"], vocabulary: [{ word: "来週", reading: "らいしゅう", meaning: "next week / আগামী সপ্তাহ" }], sentences: [{ japanese: "来週、テストがあります。", reading: "らいしゅう、てすとが あります。", meaning: "There is a test next week. / আগামী সপ্তাহে পরীক্ষা আছে।" }], deck: 2 },
 
-    // --- DECK 3: People & Family (22-26, 111-116) ---
+    // --- DECK 3: People & Family ---
     { id: "N5K022", kanji: "人", meaning: "person / মানুষ", kunyomi: ["ひと"], onyomi: ["ジン", "ニン"], vocabulary: [{ word: "日本人", reading: "にほんじん", meaning: "Japanese person / জাপানি মানুষ" }], sentences: [{ japanese: "あの人は誰ですか。", reading: "あのひとは だれですか。", meaning: "Who is that person? / ওই মানুষটি কে?" }], deck: 3 },
     { id: "N5K023", kanji: "子", meaning: "child / শিশু", kunyomi: ["こ"], onyomi: ["シ"], vocabulary: [{ word: "子供", reading: "こども", meaning: "child / শিশু" }], sentences: [{ japanese: "子供が走っています。", reading: "こどもが はしっています。", meaning: "Child is running. / শিশুটি দৌড়াচ্ছে।" }], deck: 3 },
     { id: "N5K024", kanji: "男", meaning: "man / পুরুষ", kunyomi: ["おとこ"], onyomi: ["ダン"], vocabulary: [{ word: "男の人", reading: "おとこのひと", meaning: "man / পুরুষ" }], sentences: [{ japanese: "男の人がいます。", reading: "おとこのひとが います。", meaning: "There is a man. / একজন পুরুষ আছেন।" }], deck: 3 },
@@ -54,7 +54,7 @@ const KANJI_DATA = [
     { id: "N5K115", kanji: "姉", meaning: "older sister / বড় বোন", kunyomi: ["あね"], onyomi: ["シ"], vocabulary: [{ word: "姉", reading: "あね", meaning: "older sister / বড় বোন" }], sentences: [{ japanese: "姉は結婚しています。", reading: "あねは けっこんしています。", meaning: "Older sister is married. / বড় বোন বিবাহিত।" }], deck: 3 },
     { id: "N5K116", kanji: "妹", meaning: "younger sister / ছোট বোন", kunyomi: ["いもうと"], onyomi: ["マイ"], vocabulary: [{ word: "妹", reading: "いもうと", meaning: "younger sister / ছোট বোন" }], sentences: [{ japanese: "妹が来ます。", reading: "いもうとが きます。", meaning: "Younger sister is coming. / ছোট বোন আসবে।" }], deck: 3 },
 
-    // --- DECK 4: Verbs & Actions I (27-36, 85-93) ---
+    // --- DECK 4: Verbs & Actions I ---
     { id: "N5K027", kanji: "行", meaning: "go / যাওয়া", kunyomi: ["い.く"], onyomi: ["コウ"], vocabulary: [{ word: "行く", reading: "いく", meaning: "to go / যাওয়া" }], sentences: [{ japanese: "学校へ行きます。", reading: "がっこうへ いきます。", meaning: "I go to school. / আমি স্কুলে যাই।" }], deck: 4 },
     { id: "N5K028", kanji: "来", meaning: "come / আসা", kunyomi: ["く.る"], onyomi: ["ライ"], vocabulary: [{ word: "来る", reading: "くる", meaning: "to come / আসা" }], sentences: [{ japanese: "友達が来ました。", reading: "ともだちが きました。", meaning: "A friend came. / বন্ধু এসেছে।" }], deck: 4 },
     { id: "N5K029", kanji: "食", meaning: "eat / খাওয়া", kunyomi: ["た.べる"], onyomi: ["ショク"], vocabulary: [{ word: "食べる", reading: "たべる", meaning: "to eat / খাওয়া" }], sentences: [{ japanese: "ご飯を食べます。", reading: "ごはんを たべます。", meaning: "I eat rice. / আমি ভাত খাই।" }], deck: 4 },
@@ -75,7 +75,7 @@ const KANJI_DATA = [
     { id: "N5K092", kanji: "降", meaning: "descend, fall / নামা, পড়া", kunyomi: ["お.りる", "ふ.る"], onyomi: ["コウ"], vocabulary: [{ word: "降りる", reading: "おりる", meaning: "to get off / নামা" }], sentences: [{ japanese: "バスを降ります。", reading: "ばすを おります。", meaning: "I get off the bus. / আমি বাস থেকে নামি।" }], deck: 4 },
     { id: "N5K093", kanji: "会", meaning: "meet / দেখা করা", kunyomi: ["あ.う"], onyomi: ["カイ"], vocabulary: [{ word: "会う", reading: "あう", meaning: "to meet / দেখা করা" }], sentences: [{ japanese: "友達に会います。", reading: "ともだちに あいます。", meaning: "I meet a friend. / আমি বন্ধুর সাথে দেখা করি।" }], deck: 4 },
 
-    // --- DECK 5: Verbs & Actions II (94, 134-142) ---
+    // --- DECK 5: Verbs & Actions II ---
     { id: "N5K094", kanji: "思", meaning: "think / ভাবা", kunyomi: ["おも.う"], onyomi: ["シ"], vocabulary: [{ word: "思う", reading: "おもう", meaning: "to think / ভাবা" }], sentences: [{ japanese: "いいと思います。", reading: "いいと おもいます。", meaning: "I think it is good. / আমার মনে হয় এটা ভালো।" }], deck: 5 },
     { id: "N5K134", kanji: "歩", meaning: "walk / হাঁটা", kunyomi: ["ある.く"], onyomi: ["ホ"], vocabulary: [{ word: "歩く", reading: "あるく", meaning: "to walk / হাঁটা" }], sentences: [{ japanese: "歩いて行きます。", reading: "あるいて いきます。", meaning: "I will go on foot. / আমি হেঁটে যাব।" }], deck: 5 },
     { id: "N5K135", kanji: "走", meaning: "run / দৌড়ানো", kunyomi: ["はし.る"], onyomi: ["ソウ"], vocabulary: [{ word: "走る", reading: "はしる", meaning: "to run / দৌড়ানো" }], sentences: [{ japanese: "公園を走ります。", reading: "こうえんを はしります。", meaning: "I run in the park. / আমি পার্কে দৌড়াই।" }], deck: 5 },
@@ -87,7 +87,7 @@ const KANJI_DATA = [
     { id: "N5K141", kanji: "作", meaning: "make / তৈরি করা", kunyomi: ["つく.る"], onyomi: ["サク"], vocabulary: [{ word: "作る", reading: "つくる", meaning: "to make / তৈরি করা" }], sentences: [{ japanese: "ケーキを作ります。", reading: "けーきを つくります。", meaning: "I make a cake. / আমি কেক তৈরি করি।" }], deck: 5 },
     { id: "N5K142", kanji: "海", meaning: "sea / সাগর", kunyomi: ["うみ"], onyomi: ["カイ"], vocabulary: [{ word: "海", reading: "うみ", meaning: "sea / সাগর" }], sentences: [{ japanese: "海へ行きたいです。", reading: "うみへ いきたいです。", meaning: "I want to go to the sea. / আমি সাগরে যেতে চাই।" }], deck: 5 },
 
-    // --- DECK 6: Adjectives & Opposites (37-42, 75-84) ---
+    // --- DECK 6: Adjectives & Opposites ---
     { id: "N5K037", kanji: "大", meaning: "big / বড়", kunyomi: ["おお.きい"], onyomi: ["ダイ", "タイ"], vocabulary: [{ word: "大学", reading: "だいがく", meaning: "university / বিশ্ববিদ্যালয়" }], sentences: [{ japanese: "大きな家です。", reading: "おおきな いえ です。", meaning: "It is a big house. / এটি একটি বড় বাড়ি।" }], deck: 6 },
     { id: "N5K038", kanji: "小", meaning: "small / ছোট", kunyomi: ["ちい.さい"], onyomi: ["ショウ"], vocabulary: [{ word: "小さい", reading: "ちいさい", meaning: "small / ছোট" }], sentences: [{ japanese: "小さい犬です。", reading: "ちいさい いぬ です。", meaning: "It is a small dog. / এটি একটি ছোট কুকুর।" }], deck: 6 },
     { id: "N5K039", kanji: "高", meaning: "high, exp / উঁচু, দামি", kunyomi: ["たか.い"], onyomi: ["コウ"], vocabulary: [{ word: "高い", reading: "たかい", meaning: "expensive / দামি" }], sentences: [{ japanese: "この本は高いです。", reading: "この ほんは たかい です。", meaning: "This book is expensive. / এই বইটি দামি।" }], deck: 6 },
@@ -105,7 +105,7 @@ const KANJI_DATA = [
     { id: "N5K083", kanji: "赤", meaning: "red / লাল", kunyomi: ["あか"], onyomi: ["セキ"], vocabulary: [{ word: "赤い", reading: "あかい", meaning: "red / লাল" }], sentences: [{ japanese: "赤いりんごです。", reading: "あかい りんご です。", meaning: "It is a red apple. / এটি একটি লাল আপেল।" }], deck: 6 },
     { id: "N5K084", kanji: "青", meaning: "blue / নীল", kunyomi: ["あお"], onyomi: ["セイ"], vocabulary: [{ word: "青い", reading: "あおい", meaning: "blue / নীল" }], sentences: [{ japanese: "青い空がきれいです。", reading: "あおい そらが きれいです。", meaning: "The blue sky is beautiful. / নীল আকাশ সুন্দর।" }], deck: 6 },
 
-    // --- DECK 7: Environment, Nature & Weather (43-46, 64-69, 117-120, 143-146) ---
+    // --- DECK 7: Environment, Nature & Weather ---
     { id: "N5K043", kanji: "上", meaning: "up, above / উপরে", kunyomi: ["うえ"], onyomi: ["ジョウ"], vocabulary: [{ word: "上", reading: "うえ", meaning: "above / উপরে" }], sentences: [{ japanese: "机の上にあります。", reading: "つくえの うえに あります。", meaning: "It is on the desk. / এটি টেবিলের উপরে।" }], deck: 7 },
     { id: "N5K044", kanji: "下", meaning: "down, below / নিচে", kunyomi: ["した"], onyomi: ["カ", "ゲ"], vocabulary: [{ word: "下", reading: "した", meaning: "below / নিচে" }], sentences: [{ japanese: "机の下にあります。", reading: "つくえの したに あります。", meaning: "It is under the desk. / এটি টেবিলের নিচে।" }], deck: 7 },
     { id: "N5K045", kanji: "中", meaning: "inside, middle / ভিতরে, মাঝখানে", kunyomi: ["なか"], onyomi: ["チュウ"], vocabulary: [{ word: "中", reading: "なか", meaning: "inside / ভিতরে" }], sentences: [{ japanese: "箱の中にあります。", reading: "はこの なかに あります。", meaning: "It is inside the box. / এটি বাক্সের ভিতরে।" }], deck: 7 },
@@ -125,7 +125,7 @@ const KANJI_DATA = [
     { id: "N5K145", kanji: "花", meaning: "flower / ফুল", kunyomi: ["はな"], onyomi: ["カ"], vocabulary: [{ word: "花", reading: "はな", meaning: "flower / ফুল" }], sentences: [{ japanese: "花を買います。", reading: "はなを かいます。", meaning: "I buy flowers. / আমি ফুল কিনি।" }], deck: 7 },
     { id: "N5K146", kanji: "草", meaning: "grass / ঘাস", kunyomi: ["くさ"], onyomi: ["ソウ"], vocabulary: [{ word: "草", reading: "くさ", meaning: "grass / ঘাস" }], sentences: [{ japanese: "草の上に座る。", reading: "くさの うえに すわる。", meaning: "Sit on the grass. / ঘাসের উপর বসি।" }], deck: 7 },
 
-    // --- DECK 8: Body & Senses (70-74, 156-159) ---
+    // --- DECK 8: Body & Senses ---
     { id: "N5K070", kanji: "目", meaning: "eye / চোখ", kunyomi: ["め"], onyomi: ["モク"], vocabulary: [{ word: "目", reading: "め", meaning: "eye / চোখ" }], sentences: [{ japanese: "目が痛いです。", reading: "めが いたいです。", meaning: "My eyes hurt. / আমার চোখ ব্যথা করছে।" }], deck: 8 },
     { id: "N5K071", kanji: "耳", meaning: "ear / কান", kunyomi: ["みみ"], onyomi: ["ジ"], vocabulary: [{ word: "耳", reading: "みみ", meaning: "ear / কান" }], sentences: [{ japanese: "耳が聞こえません。", reading: "みみが きこえません。", meaning: "I cannot hear. / আমি কানে শুনতে পাই না।" }], deck: 8 },
     { id: "N5K072", kanji: "口", meaning: "mouth / মুখ", kunyomi: ["くち"], onyomi: ["コウ"], vocabulary: [{ word: "出口", reading: "でぐち", meaning: "exit / বাহির হওয়ার পথ" }], sentences: [{ japanese: "口を開けてください。", reading: "くちを あけてください。", meaning: "Please open your mouth. / দয়া করে মুখ খুলুন।" }], deck: 8 },
@@ -136,7 +136,7 @@ const KANJI_DATA = [
     { id: "N5K158", kanji: "心", meaning: "heart, mind / হৃদয়, মন", kunyomi: ["こころ"], onyomi: ["シン"], vocabulary: [{ word: "安心", reading: "あんしん", meaning: "peace of mind / নিশ্চিন্ত" }], sentences: [{ japanese: "心から感謝します。", reading: "こころから かんしゃします。", meaning: "Thank you from my heart. / হৃদয় থেকে ধন্যবাদ।" }], deck: 8 },
     { id: "N5K159", kanji: "声", meaning: "voice / কণ্ঠস্বর", kunyomi: ["こえ"], onyomi: ["セイ"], vocabulary: [{ word: "声", reading: "こえ", meaning: "voice / কণ্ঠস্বর" }], sentences: [{ japanese: "大きな声で話します。", reading: "おおきな こえで はなします。", meaning: "Speak in a loud voice. / জোরে কথা বলি।" }], deck: 8 },
 
-    // --- DECK 9: Society, School & Daily Life (47-55, 95-100, 105-108, 169-170) ---
+    // --- DECK 9: Society, School & Daily Life ---
     { id: "N5K047", kanji: "国", meaning: "country / দেশ", kunyomi: ["くに"], onyomi: ["コク"], vocabulary: [{ word: "外国", reading: "がいこく", meaning: "foreign country / বিদেশ" }], sentences: [{ japanese: "お国はどちらですか。", reading: "おくには どちら ですか。", meaning: "Where is your country? / আপনার দেশ কোথায়?" }], deck: 9 },
     { id: "N5K048", kanji: "学", meaning: "study / পড়াশোনা", kunyomi: ["まな.ぶ"], onyomi: ["ガク"], vocabulary: [{ word: "学生", reading: "がくせい", meaning: "student / ছাত্র" }], sentences: [{ japanese: "学校へ行きます。", reading: "がっこうへ いきます。", meaning: "I go to school. / আমি স্কুলে যাই।" }], deck: 9 },
     { id: "N5K049", kanji: "校", meaning: "school / স্কুল", kunyomi: [], onyomi: ["コウ"], vocabulary: [{ word: "学校", reading: "がっこう", meaning: "school / স্কুল" }], sentences: [{ japanese: "学校で勉強します。", reading: "がっこうで べんきょうします。", meaning: "I study at school. / আমি স্কুলে পড়ি।" }], deck: 9 },
@@ -159,7 +159,7 @@ const KANJI_DATA = [
     { id: "N5K169", kanji: "紙", meaning: "paper / কাগজ", kunyomi: ["かみ"], onyomi: ["シ"], vocabulary: [{ word: "手紙", reading: "てがみ", meaning: "letter / চিঠি" }], sentences: [{ japanese: "紙に書きます。", reading: "かみに かきます。", meaning: "I write on paper. / আমি কাগজে লিখি।" }], deck: 9 },
     { id: "N5K170", kanji: "門", meaning: "gate / গেট", kunyomi: ["かど"], onyomi: ["モン"], vocabulary: [{ word: "専門", reading: "せんもん", meaning: "specialty / বিশেষত্ব" }], sentences: [{ japanese: "学校の門で待ちます。", reading: "がっこうの もんで まちます。", meaning: "I wait at the school gate. / আমি স্কুলের গেটে অপেক্ষা করি।" }], deck: 9 },
 
-    // --- DECK 10: Animals, Food & Surroundings (101-104, 109-110, 147-155, 160-166) ---
+    // --- DECK 10: Animals, Food & Surroundings ---
     { id: "N5K101", kanji: "東", meaning: "east / পূর্ব", kunyomi: ["ひがし"], onyomi: ["トウ"], vocabulary: [{ word: "東", reading: "ひがし", meaning: "east / পূর্ব" }], sentences: [{ japanese: "東に行きます。", reading: "ひがしに いきます。", meaning: "I go east. / আমি পূর্ব দিকে যাই।" }], deck: 10 },
     { id: "N5K102", kanji: "西", meaning: "west / পশ্চিম", kunyomi: ["にし"], onyomi: ["セイ"], vocabulary: [{ word: "西", reading: "にし", meaning: "west / পশ্চিম" }], sentences: [{ japanese: "太陽が西に沈む。", reading: "たいようが にしに しずむ。", meaning: "Sun sets in the west. / সূর্য পশ্চিমে অস্ত যায়।" }], deck: 10 },
     { id: "N5K103", kanji: "南", meaning: "south / দক্ষিণ", kunyomi: ["みなみ"], onyomi: ["ナン"], vocabulary: [{ word: "南", reading: "みなみ", meaning: "south / দক্ষিণ" }], sentences: [{ japanese: "南口で会いましょう。", reading: "みなみぐちで あいましょう。", meaning: "Let's meet at the south exit. / দক্ষিণ গেটে দেখা করি।" }], deck: 10 },
@@ -180,7 +180,7 @@ const KANJI_DATA = [
     { id: "N5K162", kanji: "歌", meaning: "song, sing / গান, গাওয়া", kunyomi: ["うた", "うた.う"], onyomi: ["カ"], vocabulary: [{ word: "歌う", reading: "うたう", meaning: "to sing / গান গাওয়া" }], sentences: [{ japanese: "歌を歌います。", reading: "うたを うたいます。", meaning: "I sing a song. / আমি গান গাই।" }], deck: 10 },
     { id: "N5K163", kanji: "写", meaning: "copy / অনুলিপি", kunyomi: ["うつ.す"], onyomi: ["シャ"], vocabulary: [{ word: "写真", reading: "しゃしん", meaning: "photo / ছবি" }], sentences: [{ japanese: "写真を撮ります。", reading: "しゃしんを とります。", meaning: "I take a photo. / আমি ছবি তুলি।" }], deck: 10 },
     { id: "N5K164", kanji: "真", meaning: "true, reality / সত্য", kunyomi: ["ま"], onyomi: ["シン"], vocabulary: [{ word: "真っ白", reading: "まっしろ", meaning: "pure white / ধবধবে সাদা" }], sentences: [{ japanese: "きれいな写真ですね。", reading: "きれいな しゃしんですね。", meaning: "Beautiful photo. / সুন্দর ছবি।" }], deck: 10 },
-    { id: "N5K165", kanji: "映", meaning: "reflect / প্রতিফলিত", kunyomi: ["うつ.る"], onyomi: ["エイ"], vocabulary: [{ word: "映画", reading: "えいが", meaning: "movie / সিনেমা" }], sentences: [{ japanese: "映画を見に行きます。", reading: "映画を みに いきます。", meaning: "I go to see a movie. / আমি সিনেমা দেখতে যাই।" }], deck: 10 },
+    { id: "N5K165", kanji: "映", meaning: "reflect / প্রতিফলিত", kunyomi: ["うつ.る"], onyomi: ["エイ"], vocabulary: [{ word: "映画", reading: "えいが", meaning: "movie / সিনেমা" }], sentences: [{ japanese: "映画を見に行きます。", reading: "えいがを みに いきます。", meaning: "I go to see a movie. / আমি সিনেমা দেখতে যাই।" }], deck: 10 },
     { id: "N5K166", kanji: "画", meaning: "picture / চিত্র", kunyomi: [], onyomi: ["ガ", "カク"], vocabulary: [{ word: "映画館", reading: "えいがかん", meaning: "movie theater / সিনেমা হল" }], sentences: [{ japanese: "日本の映画が好きです。", reading: "にほんの えいがが すきです。", meaning: "I like Japanese movies. / আমি জাপানি সিনেমা পছন্দ করি।" }], deck: 10 }
 ];
 
@@ -380,14 +380,14 @@ function renderDashboard() {
 
     let dashboardHTML = ''; 
 
-    // Render Master Deck first
+    // Render Master Deck first, then Decks 1 through 10
     ['master', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].forEach(deckId => {
         const cards = deckMap[deckId];
-        if (cards.length === 0) return;
+        if (!cards || cards.length === 0) return;
 
         let stats = { new: 0, learning: 0, due: 0, strong: 0, weak: 0 };
         cards.forEach(card => {
-            const record = kanjiProgress[card.id];
+            const record = kanjiProgress[card.id] || createDefaultRecord();
             if (record.state === 'new') stats.new++;
             else if (record.state === 'learning') stats.learning++;
             if (isDue(record, now) && record.state !== 'new') stats.due++;
@@ -564,16 +564,21 @@ document.querySelectorAll('.btn-rate').forEach(btn => {
     });
 });
 
-document.getElementById('btn-back-deck-sum').addEventListener?.('click', () => { renderDashboard(); switchView('view-dashboard'); });
-document.getElementById('btn-back-deck').addEventListener('click', () => { renderDashboard(); switchView('view-dashboard'); });
+const btnBackDeck = document.getElementById('btn-back-deck');
+if (btnBackDeck) {
+    btnBackDeck.addEventListener('click', () => { renderDashboard(); switchView('view-dashboard'); });
+}
 
-document.getElementById('btn-review-again').addEventListener('click', () => {
-    sessionQueue = [...sessionFailures];
-    sessionStats = { total: sessionQueue.length, reviewed: 0, again: 0, hard: 0, good: 0, easy: 0 };
-    sessionFailures = [];
-    switchView('view-practice');
-    nextCard();
-});
+const btnReviewAgain = document.getElementById('btn-review-again');
+if (btnReviewAgain) {
+    btnReviewAgain.addEventListener('click', () => {
+        sessionQueue = [...sessionFailures];
+        sessionStats = { total: sessionQueue.length, reviewed: 0, again: 0, hard: 0, good: 0, easy: 0 };
+        sessionFailures = [];
+        switchView('view-practice');
+        nextCard();
+    });
+}
 
 window.addEventListener('DOMContentLoaded', () => {
     loadProgress();
