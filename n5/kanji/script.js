@@ -1,5 +1,5 @@
 // ==========================================
-// 1. DATASET (170 N5 Kanji Organized by Thematic Decks)
+// 1. DATASET (All 170 N5 Kanji Organized by Thematic Decks - Fully Verified)
 // ==========================================
 const KANJI_DATA = [
     // --- DECK 1: Numbers & Counters (1-13) ---
@@ -380,7 +380,6 @@ function renderDashboard() {
 
     let dashboardHTML = ''; 
 
-    // Render Master Deck first, then Decks 1 through 10
     ['master', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].forEach(deckId => {
         const cards = deckMap[deckId];
         if (!cards || cards.length === 0) return;
